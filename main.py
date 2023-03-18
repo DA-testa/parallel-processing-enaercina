@@ -2,17 +2,15 @@
 # python3
 import heapq
 def parallel_processing(n, m, data):
-    # initialize heap with the first n jobs
+   
     threads = [(0, i) for i in range(n)]
     heapq.heapify(threads)
     results = []
 
     for i in range(m):
-        # get the earliest finishing thread
+       
         start_time, thread = heapq.heappop(threads)
-        # record the result
         results.append((thread, start_time))
-        # add the next job to the thread
         heapq.heappush(threads, (start_time + data[i], thread))
 
     return results
