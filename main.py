@@ -1,5 +1,5 @@
 
-# python3
+# Ena Daniela Ercina 221RDB369 2.grupa
 import heapq
 def parallel_processing(n, m, data):
    
