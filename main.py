@@ -1,3 +1,5 @@
+
+# python3
 import heapq
 def parallel_processing(n, m, data):
     # initialize heap with the first n jobs
@@ -22,14 +24,15 @@ def main():
     # first line - n and m
     # n - thread count
     # m - job count
-    n = int(input())
-    m = int(input())
+    #n = int(input())
+    #m = int(input())
+    nm = list(map(int, input().split()))
 
     # second line - data
     # data - contains m integers t(i) - the times in seconds it takes any thread to process i-th job
     data = list(map(int, input().split()))
     # TODO: create the function
-    result = parallel_processing(n, m, data)
+    result = parallel_processing(nm[0], nm[1], data)
 
     # TODO: print out the results, each pair in it's own line
     for thread, start_time in result:
